@@ -5,7 +5,9 @@
 --color4: #404BBF;
 --color5: #ffffff;
 --color6:  #F4F4FD;
---color7: #E7E9FC;}
+--color7: #E7E9FC;
+--color8: #8e8f99;
+--color9:  #31D0AA; }
 
 p, h1, h2, h3, h4, h5 {
     margin: 0;
@@ -31,14 +33,14 @@ body {
     
     }
 .header-section {
-    border-bottom: 1px solid #E7E9FC;
+    border-bottom: 1px solid var(--color7);
 }
 .header-container {
     display: flex;
     padding-top: 24px;
     /* padding-bottom: 24px; */
     align-items: center;
-    border-bottom: 1px solid #E7E9FC;
+    border-bottom: 1px solid var(--color7);
 }
 .header-navi {
     display: flex;
@@ -65,7 +67,7 @@ body {
     margin-left: 76px;
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1) ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .header-item {
@@ -87,11 +89,7 @@ body {
 }
 .header-link:is(:hover, :focus){color: var(--color4);
 }
-.header-link-s {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
-}
+
 .header-link::after {
     content: "";
     display: block;
@@ -239,7 +237,7 @@ body {
     width: calc((100% - 48px) / 3);
     background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
     background-blend-mode: soft-light, normal;
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--color7);
 }  
 .main-demonstr {
     font-weight: 700;
@@ -257,7 +255,7 @@ body {
 }
 .staff-title { 
     width: calc((100% - 72px) / 4);
-    background: #FFFFFF;
+    background: var(--color5);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
@@ -397,7 +395,7 @@ mix-blend-mode: normal;
     align-items: center;
     border: 1px solid var(--color2);
     border-radius: 5px;
-    color: #8e8f99;
+    color: var(--color8);
     transition-property: color, border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
@@ -470,13 +468,13 @@ mix-blend-mode: normal;
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: #2f3636;
+        background-color: var(--color1);
         transition-property: background-color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
     }
     .footer-soc-link:is(:hover, :focus){ 
-        background: #31D0AA
+        background: var(--color9);
         }
     .footer-soc-icon {
         fill: var(--color5);
@@ -518,9 +516,9 @@ mix-blend-mode: normal;
 
 .pf-main-but {
     cursor: pointer;
-    transition-property: background-color, box-shadow;
+    transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1) ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .pf-main-link:is(:hover, :focus){box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);}
 .function-title:hover .pf-main-text {
@@ -541,8 +539,8 @@ font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.02em;
-color: #F4F4FD;
-background: #4D5AE5;
+color: var(--color6);
+background: var(--color3);
 background-blend-mode: soft-light;
 mix-blend-mode: normal;
 transform: translateY(100%);
@@ -586,7 +584,7 @@ transition: transform 250ms linear;
     width: calc((100% - 48px) / 3);
     
      }
-    .pf-main-wherefunct :is(:hover, :focus){color: var(--color4);}
+    .pf-main-wherefunct:is(:hover, :focus){color: var(--color4);}
     .pf-main-wherefunct {
     font-size: 16px;
     line-height: 1.5;
@@ -611,8 +609,6 @@ transition: transform 250ms linear;
     }
    .modal {    
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -620,18 +616,10 @@ transition: transform 250ms linear;
     transition-property: transform;
     transition-duration: 1000ms;
     padding: 20px;
-    /* gap: 60px;
-    top: 2172px;
-    left: 120px; */
-    isolation: isolate;
-    width: 1050px;
-    height: 176px;
-    background-color: #E7E9FC;
+    width: 408px;
+    height: 576px;
+    background-color: var(--color7);
     border-radius: 5px;
-    flex: none;
-    order: 8;
-    flex-grow: 0;
-    z-index: 8;
    }
    .modal-close-button {
     width: 24px;
@@ -643,13 +631,17 @@ transition: transform 250ms linear;
     justify-content: center;
     margin-left: auto;
     margin-right: 20px;
+    cursor: pointer;
+    transition-property: color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
    }
    .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
    }
-   .modal-clic-button {
+   /* .modal-clic-button {
     width: 24px;
     height: 24px;
     border: 1px solid var(--color2);
@@ -658,7 +650,7 @@ transition: transform 250ms linear;
     align-items: center;
     justify-content: center;
     /* margin-left: auto; */
-    margin-right: 20px;
+    /* margin-right: 20px;
     color: var(--color2)
 }
    .modal-left {
@@ -671,15 +663,15 @@ transition: transform 250ms linear;
     line-height: 14px;
     letter-spacing: 0.04em;
     color: #8E8F99;
-    }
-   .modal-left-line {
+    } */ 
+   /* .modal-left-line {
     width: 360px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    padding: 8px 326px 8px 16px;
+    padding: 8px 326px 8px 16px; */
     /* margin: auto 20px; */
-    color: #2E2F42;
+    /* color: #2E2F42;
    }
    .modal-icon-victor {
     fill:currentColor;
@@ -694,11 +686,11 @@ transition: transform 250ms linear;
 }
    .modal-clic-button:is(:hover, :focus){
     border-color: var(--color4);
-    color: var(--color4);}
+    color: var(--color4);} */
 
     .modal-close-icon {
         fill:currentColor;
     }
-       .modal-close-button:is(:hover, :focus){
-        border-color: var(--color4);
-        color: var(--color4);}
+    .modal-close-button:is(:hover, :focus){
+    border-color: var(--color4);
+    color: var(--color4);}
