@@ -54,7 +54,7 @@
           <section class="main-sect-1">
             <div class="container container-order">
             <h1 class="main-title">Effective Solutions for Your Business</h1>
-            <button class="main-but" type="button">Order Service</button>
+            <button  data-modal-open class="main-but" type="button">Order Service</button>
             </div>
           </section>
          
@@ -398,5 +398,28 @@
                 
           </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <div class="modal-left">
+              <p class="modal-name">Name</p>
+              <div class="modal-left-line">
+                <svg class="modal-icon-victor" Width="12" Height="12">
+                  <use  href="./images/symbol-defs.svg#icon-victor"></use>
+                </svg>
+              </div >
+            </div >
+            <!-- <div class="modal-right"> -->
+              <button type="button" class="modal-clic-button">
+                <svg class="modal-clic-icon" Width="10" Height="8">
+                <use href="./images/symbol-defs.svg#icon-vector"></use>
+              </svg></button>
+              <button data-modal-close type="button" class="modal-close-button">
+                <svg class="modal-close-icon" Width="8" Height="8">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg></button>
+            <!-- </div > -->
+          </div>
+        </div>
+        <script src="./js/modal.js"></script>
       </body>
 </html>
